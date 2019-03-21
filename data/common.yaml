@@ -1,0 +1,30 @@
+---
+  users:
+    'carlos':
+      comment: 'Carlos Albornoz'
+      uid: '1010'
+      sshkeys:
+        - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT0IE26dvjtlPLXOwP14OmI4fMnfawJgi/O19xFRGJNoIy0nmtj35bi0qa66Xqvnbs2NqipSB/fwbt2dDt4CIJKNljNzvZZz+KCNoG6YxrZv1KvY8EoQugAGUZDTrab70sk+qhLx1MLScCVr2PakuCyJmxqEbapnhoa3Z/vPiXlAyVL1R1ncAFVsx2eodH+8Mn2Uko5nWaIPryW285tx8NkFbzxiaO8RpFkjJucVb/Ap32pVRfQhLi3T9TCWsFWKqww8vEVmbyxh6UAVc86VnTW0djiY8b8sbv+ObFBsrM4T4KHuIkFFN8+iwxGFc5JCGDigIpYsgMVHX/DcuZ8gJV carlos'
+    'jorge':
+      comment: 'Jorge Molina'
+      uid: '1011'
+      sshkeys:
+        - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1IvXl3fvtP+3Y3G5le5Xdt2lvGbnTkrRfuM856pfVuciEZiTOtObD2otlLCFg48lQSb4acONTgeObSphcYPz98f5sIASASvZ6BVBDu6yGLfu6MTbA5nkMpnU18iZj+XejHLTgcJ7dw4jSs3bD1SLd2q0vwpuh+CdIUQorPRFY4a/wXZ2wMcPEtNZciq4fhE1zJCEYl+JC2Tzto1uOQ5YbI7VpvGZVLrtA4IkxGL5Ni7h/0u40huLl3xJJbCTN4zzYaX5kSzV40cFZaAnRMhVa/IAzx00JO9P95JBnQqxqedSYwcnUZKGPNimKVZUjHxOO9/QWLUlmfWilrLiVFfJR jorge'
+  allow_users:
+    - 'carlos'
+    - 'jorge'
+    - 'vagrant'
+    - 'ubuntu'
+  sudoers:
+    - 'carlos'
+    - 'jorge'
+    - 'vagrant'
+    - 'ubuntu'
+  classes:
+    - profile::ntp
+    - profile::puppet
+    - profile::ssh
+    - profile::sudoers
+    - profile::timezone
+    - profile::users
+
