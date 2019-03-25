@@ -1,5 +1,5 @@
 # Synchronize with NTP
-class profile::ntp {
+class profiles::ntp {
   include ::ntp
 }
 

@@ -1,9 +1,9 @@
 # Manage sshd config
-class profile::ssh {
+class profiles::ssh {
   ensure_packages(['openssh-server'])
 
   file { '/etc/ssh/sshd_config':
-    content => epp('profile/ssh/sshd_config.epp', {
+    content => epp('profiles/ssh/sshd_config.epp', {
       'allow_users' => lookup('allow_users', Array[String], 'unique'),
     }),
     notify  => Service['ssh'],
@@ -14,4 +14,3 @@ class profile::ssh {
     enable => true,
   }
 }
-
